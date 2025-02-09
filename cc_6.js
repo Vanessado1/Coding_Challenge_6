@@ -63,3 +63,17 @@ const applyBulkDiscount = (orders, discountFunction) =>
 };
 const discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
 console.log(discountedOrders); // Expected output: [200, 540, 1080, 450, 720]
+
+// Task 7: Closures 
+//created arrow function to track expenses 
+const createExpenseTracker = () => {
+    let totalExpenses = 0;
+
+    return (amount) => {
+        totalExpenses += amount;
+        return totalExpenses;
+    };
+};
+let tracker = createExpenseTracker(); // declared the function as tracker
+console.log(tracker(200)); // Expected output: "Total Expenses: $200"
+console.log(tracker(150)); // Expected output: "Total Expenses: $350"
