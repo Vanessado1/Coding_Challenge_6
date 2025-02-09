@@ -30,3 +30,17 @@ const calculateBonus = (salary, performanceRating) => {
 console.log(`Bonus: $${calculateBonus(5000, 'Excellent')}`); // Expected output: "Bonus: $1000"
 console.log(`Bonus: $${calculateBonus(7000, 'Good')}`);  // Expected output: "Bonus: $700"
 
+// Task 4: Parameters and Arguments 
+// created a function to determine the subscription amount 
+function calculateSubscriptionCost(plan, months,discount = 0) {
+    let subscriptionCosts = {
+        'Basic': 10,
+        'Premium': 20,
+        'Enterprise': 50 
+    };
+    let subscriptionCost = subscriptionCosts[plan] || 0;
+    let subscription = subscriptionCost * months -  discount; 
+    return subscription; 
+}
+console.log(`Total Cost: $${calculateSubscriptionCost("Basic", 6, 10)}`); // Expected output: "Total Cost: $50"
+console.log(`Total Cost: $${calculateSubscriptionCost("Premium", 12, 0)}`); // Expected output: "Total Cost: $240"
