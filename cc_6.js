@@ -44,3 +44,11 @@ function calculateSubscriptionCost(plan, months,discount = 0) {
 }
 console.log(`Total Cost: $${calculateSubscriptionCost("Basic", 6, 10)}`); // Expected output: "Total Cost: $50"
 console.log(`Total Cost: $${calculateSubscriptionCost("Premium", 12, 0)}`); // Expected output: "Total Cost: $240"
+
+// Task 5: Returning Values 
+// created a function to convert money to different currency 
+function convertCurrency(amount, exchangeRate) {
+    return amount * exchangeRate
+}
+console.log(`Converted Amount: $${convertCurrency(100, 1.1)}`); // Expected output: "Converted Amount: $110"
+console.log(`Converted Amount: $${convertCurrency(250, 0.85)}`); // Expected output: "Converted Amount: $212.50"
