@@ -3,8 +3,8 @@
 function calculateProfit(costPrice,sellingPrice,unitSold){
     return profit = (sellingPrice - costPrice)*unitSold
 }
-console.log(`Profit: $${calculateProfit(20, 30, 100)}`); // Expected output: "Total Profit: $1000"
-console.log(`Profit: $${calculateProfit(50, 70, 200)}`); // Expected output: "Total Profit: $4000"
+console.log(`Total Profit: $${calculateProfit(20, 30, 100)}`); // Expected output: "Total Profit: $1000"
+console.log(`Total Profit: $${calculateProfit(50, 70, 200)}`); // Expected output: "Total Profit: $4000"
 
 // Task 2: Function Expression 
 // declared a function expression to calculate the sales tax 
