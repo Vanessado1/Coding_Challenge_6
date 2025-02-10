@@ -77,3 +77,14 @@ const createExpenseTracker = () => {
 let tracker = createExpenseTracker(); // declared the function as tracker
 console.log(tracker(200)); // Expected output: "Total Expenses: $200"
 console.log(tracker(150)); // Expected output: "Total Expenses: $350"
+
+// Task 8: Recursion in JavaScript
+//created a recursive function to calculate promotions  
+const calculateYearsToPromotion = (employeeLevel) => {
+    if (employeeLevel >= 10) {
+        return 0;
+    }
+    return 2 + calculateYearsToPromotion (employeeLevel + 1);
+};
+console.log(`Years to level 10: ${calculateYearsToPromotion(7)}`); // Expected output: "Years to Level 10: 6"
+console.log(`Years to level 10: ${calculateYearsToPromotion(5)}`); // Expected output: "Years to Level 10: 10"
